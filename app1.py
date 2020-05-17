@@ -134,6 +134,7 @@ def update_graph(xaxis_name, yaxis_name):
               [Input('interval-component', 'n_intervals')])
 def update_date(n):
     return [
+        html.P('Current Time ' + str(datetime.now() - timedelta(hours=5, minutes=30)) + ' IST'),
         html.P(str(datetime(year=2020, month=4, day=14, hour=23, minute=59, second=59, microsecond=99999) - datetime.now() - timedelta(hours=5, minutes=30)).split('.')[0] + ' Time Left To Finish Lockdown'),
         html.P(str(datetime(year=2020, month=4, day=30, hour=23, minute=59, second=59, microsecond=99999) - datetime.now() - timedelta(hours=5, minutes=30)).split('.')[0] + ' Time Left To Finish Lockdown, if Lockdown extends till 30th April'),
         html.P(str(datetime(year=2020, month=5, day=31, hour=23, minute=59, second=59, microsecond=99999) - datetime.now() - timedelta(hours=5, minutes=30)).split('.')[0] + ' Time Left To Finish Lockdown, if Lockdown extends till 31st May'),
